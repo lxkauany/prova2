@@ -1,56 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Cabeçalho</title>
-
-    <!-- Importando as fontes do Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-
-    <!-- Estilo CSS -->
-    <link rel="stylesheet" href="style.css"> <!-- Supondo que você tenha o CSS em style.css -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/logo.png"> 
+    <title>TripPlanner</title>
 </head>
 <body>
-
-    <!-- Início do Cabeçalho -->
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo" class="logo-img"> <!-- Substitua 'logo.png' pelo caminho da sua imagem -->
-            <h1>Minha Marca</h1>
-        </div>
+    <nav>
+        <ul>
+            <a href="index.html"> 
+                <div class="logo">
+                    <img class="logo-img" src="./assets/logo.png" alt="logo-img">
+                <li> TripPlanner  </li> 
+                </div>
+            </a>
 
-    <div class="menu-toggle" id="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+            <a href="travels.html"> 
+                <li> Viagens  </li> 
+            </a>
+            <a href="beachs.html"> 
+                <li> Praias </li> 
+            </a>
 
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Portfólio</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
+            <a href="hikes.html"> 
+                <li> Escaladas  </li> 
+            </a>
+
+            <a href="history_citys.html"> 
+                <li> Cidades Históricas  </li> 
+            </a>
+
+        </ul>
+    </nav>
     </header>
-
-    <!-- Espaço para o conteúdo da página -->
-    <main style="margin-top: 120px; padding: 20px;">
-        <h2>Bem-vindo ao site!</h2>
-        <p>Conteúdo principal da página.</p>
-    </main>
-
-<script>
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
-
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        toggle.classList.toggle('active');
-    });
-</script>
 </body>
 </html>
