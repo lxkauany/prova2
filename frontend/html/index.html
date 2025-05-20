@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="./assets/logo.png"> 
     <title>TripPlanner</title>
 </head>
 <body>
     <header>
-    <nav>
-        <ul>
-            <a href="index.html"> 
-                <div class="logo">
-                    <img class="logo-img" src="./assets/logo.png" alt="logo-img">
-                <li> TripPlanner  </li> 
-                </div>
-            </a>
+        <nav>
+            <ul>
+                <a href="index.html"> 
+                    <div class="logo">
+                        <img class="logo-img" src="./assets/logo.png" alt="logo-img">
+                        <li> TripPlanner  </li> 
+                    </div>
+                </a>
 
-            <a href="travels.html"> 
-                <li> Viagens  </li> 
-            </a>
-            <a href="beachs.html"> 
-                <li> Praias </li> 
-            </a>
+                <a href="travels.html"> 
+                    <li> Viagens  </li> 
+                </a>
 
-            <a href="hikes.html"> 
+                <a href="beachs.html"> 
+                    <li> Praias </li> 
+                </a>
+
+                <a href="hikes.html"> 
                 <li> Escaladas  </li> 
-            </a>
+                </a>
 
-            <a href="history_citys.html"> 
+                <a href="history_citys.html"> 
                 <li> Cidades Históricas  </li> 
-            </a>
-
-        </ul>
+                </a>
+            </ul>
     </nav>
+            <div class="containerProcura"> 
+                <input type="text" id="inputProcura" placeholder="Procure seu destino..."> 
+                <button onclick="buscardestino()">Buscar</button>
+             </div>
     </header>
+
+       <div id="infoDestino" class="info-box"></div>
+
+        <script src="../js/script.js"></script>
 </body>
 </html>
