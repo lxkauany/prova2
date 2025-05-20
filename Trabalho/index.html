@@ -9,32 +9,40 @@
 </head>
 <body>
     <header>
-    <nav>
-        <ul>
-            <a href="index.html"> 
-                <div class="logo">
-                    <img class="logo-img" src="./assets/logo.png" alt="logo-img">
-                <li> TripPlanner  </li> 
-                </div>
-            </a>
+        <nav>
+            <ul>
+                <a href="index.html"> 
+                    <div class="logo">
+                        <img class="logo-img" src="./assets/logo.png" alt="logo-img">
+                        <li> TripPlanner  </li> 
+                    </div>
+                </a>
 
-            <a href="travels.html"> 
-                <li> Viagens  </li> 
-            </a>
-            <a href="beachs.html"> 
-                <li> Praias </li> 
-            </a>
+                <a href="travels.html"> 
+                    <li> Viagens  </li> 
+                </a>
 
-            <a href="hikes.html"> 
+                <a href="beachs.html"> 
+                    <li> Praias </li> 
+                </a>
+
+                <a href="hikes.html"> 
                 <li> Escaladas  </li> 
-            </a>
+                </a>
 
-            <a href="history_citys.html"> 
+                <a href="history_citys.html"> 
                 <li> Cidades Históricas  </li> 
-            </a>
-
-        </ul>
+                </a>
+            </ul>
     </nav>
+            <div class="containerProcura"> 
+                <input type="text" id="inputProcura" placeholder="Procure seu destino..."> 
+                <button onclick="buscardestino()">Buscar</button>
+             </div>
     </header>
+
+       <div id="infoDestino" class="info-box"></div>
+
+        <script src="script.js"></script>
 </body>
 </html>

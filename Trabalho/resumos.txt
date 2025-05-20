@@ -1,0 +1,5 @@
+Dia 1
+    Fiz a header e escolhi a logo do site, também estava planejando em como construir e pesquisando algumas inspirações.
+
+Dia 2
+    Sistema simples de busca de lugares para viajar
