@@ -1,48 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="./assets/logo.png"> 
     <title>TripPlanner</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="./assets/logo.png">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <a href="index.html"> 
-                    <div class="logo">
-                        <img class="logo-img" src="./assets/logo.png" alt="logo-img">
-                        <li> TripPlanner  </li> 
-                    </div>
-                </a>
-
-                <a href="travels.html"> 
-                    <li> Viagens  </li> 
-                </a>
-
-                <a href="beachs.html"> 
-                    <li> Praias </li> 
-                </a>
-
-                <a href="hikes.html"> 
-                <li> Escaladas  </li> 
-                </a>
-
-                <a href="history_citys.html"> 
-                <li> Cidades Históricas  </li> 
-                </a>
+            <a href="index.html" class="logo">
+                <img class="logo-img" src="./assets/logo.png" alt="Logo TripPlanner">
+                <span class="logo-text">TripPlanner</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="travels.html">Viagens</a></li>
+                <li><a href="beachs.html">Praia</a></li>
+                <li><a href="hikes.html">Escaladas</a></li>
+                <li><a href="history_citys.html">Cidades Históricas</a></li>
             </ul>
-    </nav>
-            <div class="containerProcura"> 
-                <input type="text" id="inputProcura" placeholder="Procure seu destino..."> 
-                <button onclick="buscardestino()">Buscar</button>
-             </div>
+        </nav>
+        <div class="containerProcura">
+            <input type="text" id="inputProcura" placeholder="Procure seu destino...">
+            <button class="botaoBusca" onclick="buscardestino()">Buscar</button>
+        </div>
     </header>
 
-       <div id="infoDestino" class="info-box"></div>
+    <main>
+        <section class="segunda_header">
+            <div class="planeje_viagem_box">Planeje sua viagem</div>
+        </section>
+        <section id="infoDestino" class="info-box"></section>
+    </main>
 
-        <script src="../js/script.js"></script>
+    <footer>
+        <p>&copy; 2025 TripPlanner. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
