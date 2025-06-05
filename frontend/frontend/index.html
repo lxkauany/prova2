@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripMax - Pacotes de Viagem</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="container">
+      <div class="logo">TripMax</div>
+      <div class="telefone">📞 Televendas <strong>0800 883 6342</strong></div>
+      <div class="actions">
+        <a href="#">Ajuda</a>
+        <a href="#">Minhas Viagens</a>
+        <a href="#">Benefícios</a>
+        <button class="login-btn">👤 Iniciar Sessão</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="#">Hospedagens</a>
+    <a href="#">Passagens</a>
+    <a class="active" href="#">Pacotes</a>
+    <a href="#">Ofertas</a>
+    <a href="#">Pacotes prontos</a>
+    <a href="#">Aluguéis</a>
+    <a href="#">Passeios</a>
+    <a href="#">Carros</a>
+    <a href="#">Disney</a>
+    <a href="#">Universal</a>
+    <a href="#">Seguros</a>
+    <a href="#">Transfers</a>
+  </nav>
+
+  <section class="search-section">
+    <div class="search-box">
+      <h2>Pacotes de Viagens</h2>
+      <form class="search-form">
+        <input type="text" placeholder="Origem" value="Curitiba, Paraná" />
+        <input type="text" placeholder="Destino" />
+        <input type="text" placeholder="Entrada" />
+        <input type="text" placeholder="Saída" />
+        <input type="text" placeholder="Quartos" value="1" />
+        <input type="text" placeholder="Pessoas" value="2" />
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="options">
+        <a href="#">Alterar cidade ou datas de hospedagem</a>
+        <a href="#">+ Incluir segundo destino</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages">
+    <div class="card destaque">
+      <h3>Aniver TripMax</h3>
+      <p>Pacotes em até <strong>16x sem juros</strong><br><span>Até 60% OFF</span></p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590490350369-7b0de1a59c3d?auto=format&fit=crop&w=400&q=80" alt="Miami" class="card-img">
+      <h4>Pacote 4 NOITES</h4>
+      <h3>MIAMI</h3>
+      <p>The Palms Inn & Suites<br>Voo + Hotel + Café da manhã</p>
+      <p><strong>R$ 152</strong> x16 (Total R$ 2.432)</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Punta Cana" class="card-img">
+      <h4>Pacote 5 NOITES</h4>
+      <h3>PUNTA CANA</h3>
+      <p>Riu República - Adults Only<br>Voo + Hotel + All Inclusive</p>
+      <p><strong>R$ 156</strong> x16 (Total R$ 2.432)</p>
+    </div>
+  </section>
+
+  <section class="info-destinos">
+    <div class="container">
+      <h2>Explore Destinos Detalhados</h2>
+      <p>Permita-se buscar e visualizar informações completas sobre cada destino, incluindo pontos turísticos, opções de hospedagem e atividades disponíveis para tornar sua viagem inesquecível.</p>
+      <button onclick="mostrarDetalhes()">Ver detalhes de destinos</button>
+      <ul id="lista-destinos" style="display:none;">
+        <li><strong>Miami:</strong> South Beach, Everglades, shopping, gastronomia.</li>
+        <li><strong>Punta Cana:</strong> Praias paradisíacas, mergulho, resorts all inclusive.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="itinerario">
+    <div class="container">
+      <h2>Monte Seu Itinerário</h2>
+      <p>Organize sua viagem com facilidade. Planeje datas, adicione reservas de hotéis e inclua as atividades que deseja aproveitar em cada destino.</p>
+      <form onsubmit="adicionarItem(event)">
+        <input type="text" id="atividade" placeholder="Atividade (ex: Visitar museu)" required>
+        <input type="date" id="data">
+        <button type="submit">Adicionar</button>
+      </form>
+      <ul id="lista-itinerario"></ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
