@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TripMax - Pacotes de Viagem</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header class="top-bar">
     <div class="container">
@@ -43,9 +40,9 @@
   <section class="search-section">
     <div class="search-box">
       <h2>Pacotes de Viagens</h2>
-      <form class="search-form">
-        <input type="text" placeholder="Origem" value="Curitiba, Paraná" />
-        <input type="text" placeholder="Destino" />
+      <form class="search-form" onsubmit="buscarDestinos(event)">
+        <input type="text" id="origem" placeholder="Origem" value="Curitiba, Paraná" />
+        <input type="text" id="filtro" placeholder="Buscar por destino, região ou tipo" />
         <input type="text" placeholder="Entrada" />
         <input type="text" placeholder="Saída" />
         <input type="text" placeholder="Quartos" value="1" />
@@ -59,33 +56,91 @@
     </div>
   </section>
 
-  <section class="packages">
+  <section class="packages" id="pacotes">
     <div class="card destaque">
       <h3>Aniver TripMax</h3>
       <p>Pacotes em até <strong>16x sem juros</strong><br><span>Até 60% OFF</span></p>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1590490350369-7b0de1a59c3d?auto=format&fit=crop&w=400&q=80" alt="Miami" class="card-img">
+    <!-- Cards existentes + novos destinos -->
+
+    <div class="card" data-destino="miami praia cidade">
+      <img src="https://images.unsplash.com/photo-1584367367084-99239b37c3f7?auto=format&fit=crop&w=600&q=90" alt="Miami" class="card-img">
       <h4>Pacote 4 NOITES</h4>
       <h3>MIAMI</h3>
       <p>The Palms Inn & Suites<br>Voo + Hotel + Café da manhã</p>
+      <p>Descubra o melhor de Miami: praias vibrantes, compras de luxo e vida noturna agitada.</p>
       <p><strong>R$ 152</strong> x16 (Total R$ 2.432)</p>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Punta Cana" class="card-img">
+    <div class="card" data-destino="punta cana praia resort">
+      <img src="https://images.unsplash.com/photo-1576678927482-5773560f28e5?auto=format&fit=crop&w=600&q=90" alt="Punta Cana" class="card-img">
       <h4>Pacote 5 NOITES</h4>
       <h3>PUNTA CANA</h3>
       <p>Riu República - Adults Only<br>Voo + Hotel + All Inclusive</p>
+      <p>Relaxe em águas cristalinas e aproveite experiências únicas em resorts de luxo à beira-mar.</p>
       <p><strong>R$ 156</strong> x16 (Total R$ 2.432)</p>
+    </div>
+
+    <div class="card" data-destino="paris europa romantico cidade">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=90" alt="Paris" class="card-img">
+      <h4>Pacote 6 NOITES</h4>
+      <h3>PARIS</h3>
+      <p>Hôtel de la Seine<br>Voo + Hotel + Café da manhã</p>
+      <p>Encante-se com a Torre Eiffel, cafés charmosos e o clima romântico da Cidade Luz.</p>
+      <p><strong>R$ 239</strong> x16 (Total R$ 3.824)</p>
+    </div>
+
+    <div class="card" data-destino="gramado serra frio gastronomia">
+      <img src="https://images.unsplash.com/photo-1604186837223-0620bdf3c6e3?auto=format&fit=crop&w=600&q=90" alt="Gramado" class="card-img">
+      <h4>Pacote 3 NOITES</h4>
+      <h3>GRAMADO</h3>
+      <p>Hotel Ritta Höppner<br>Voo + Hotel + Café colonial</p>
+      <p>Desfrute do charme europeu, clima aconchegante e delícias gastronômicas da serra gaúcha.</p>
+      <p><strong>R$ 115</strong> x16 (Total R$ 1.840)</p>
+    </div>
+
+    <div class="card" data-destino="tokyo asia moderno cultura">
+      <img src="https://images.unsplash.com/photo-1526481280690-749b42e0ec1e?auto=format&fit=crop&w=600&q=90" alt="Tóquio" class="card-img">
+      <h4>Pacote 7 NOITES</h4>
+      <h3>TÓQUIO</h3>
+      <p>Tokyo Bay Shiomi Prince Hotel<br>Voo + Hotel</p>
+      <p>Viva o contraste entre tradição e modernidade na vibrante capital japonesa.</p>
+      <p><strong>R$ 314</strong> x16 (Total R$ 5.024)</p>
+    </div>
+
+    <div class="card" data-destino="lisboa europa cidade história">
+      <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=600&q=90" alt="Lisboa" class="card-img">
+      <h4>Pacote 5 NOITES</h4>
+      <h3>LISBOA</h3>
+      <p>Hotel Mundial<br>Voo + Hotel + Café da manhã</p>
+      <p>Explore ruas de paralelepípedos, miradouros encantadores e a rica cultura portuguesa.</p>
+      <p><strong>R$ 198</strong> x16 (Total R$ 3.168)</p>
+    </div>
+
+    <div class="card" data-destino="rio de janeiro praia brasil natureza">
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=90" alt="Rio de Janeiro" class="card-img">
+      <h4>Pacote 4 NOITES</h4>
+      <h3>RIO DE JANEIRO</h3>
+      <p>Windsor Excelsior Copacabana<br>Voo + Hotel + Café da manhã</p>
+      <p>Viva o clima vibrante do Rio com paisagens deslumbrantes entre morros e mar.</p>
+      <p><strong>R$ 124</strong> x16 (Total R$ 1.984)</p>
+    </div>
+
+    <div class="card" data-destino="cancun resort praia caribe">
+      <img src="https://images.unsplash.com/photo-1594591135097-341f7f3e0726?auto=format&fit=crop&w=600&q=90" alt="Cancún" class="card-img">
+      <h4>Pacote 6 NOITES</h4>
+      <h3>CANCÚN</h3>
+      <p>Grand Oasis Cancun<br>Voo + Hotel + All Inclusive</p>
+      <p>Águas azul-turquesa, festas na praia e conforto em resorts incríveis do Caribe.</p>
+      <p><strong>R$ 278</strong> x16 (Total R$ 4.448)</p>
     </div>
   </section>
 
   <section class="info-destinos">
     <div class="container">
       <h2>Explore Destinos Detalhados</h2>
-      <p>Permita-se buscar e visualizar informações completas sobre cada destino, incluindo pontos turísticos, opções de hospedagem e atividades disponíveis para tornar sua viagem inesquecível.</p>
+      <p>Visualize informações completas sobre pontos turísticos, hospedagens e atividades.</p>
       <button onclick="mostrarDetalhes()">Ver detalhes de destinos</button>
       <ul id="lista-destinos" style="display:none;">
         <li><strong>Miami:</strong> South Beach, Everglades, shopping, gastronomia.</li>
@@ -97,7 +152,6 @@
   <section class="itinerario">
     <div class="container">
       <h2>Monte Seu Itinerário</h2>
-      <p>Organize sua viagem com facilidade. Planeje datas, adicione reservas de hotéis e inclua as atividades que deseja aproveitar em cada destino.</p>
       <form onsubmit="adicionarItem(event)">
         <input type="text" id="atividade" placeholder="Atividade (ex: Visitar museu)" required>
         <input type="date" id="data">
