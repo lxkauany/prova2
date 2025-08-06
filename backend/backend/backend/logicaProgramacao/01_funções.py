@@ -9,8 +9,8 @@ def media(a,b):
 print(media(7,5))
 
 
-def verificar_par(10):
-    if numero % 2 == 0:
-        return "É par"
+def parOuImpar(num):
+    if(num % 2 == 0):
+       return print("o numero e par")
     else:
-        return "Não é par"
+        return print("o valor e impar")
