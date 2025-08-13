@@ -33,7 +33,7 @@ while opcao != "4":
 
     opcao = input("Opção: ")
 
-   while opcao != "Sair" and opcao != "sair":
+   while opcao:
         case "1":
             cadastrar(compras)
         case "2":
