@@ -23,4 +23,4 @@ while opcao != "3":
         case "3":
             print(f"Até logo, {nome}!")
         case _:
-            print("Opção inválida! Por favor, escolha uma opção válida.")
+            print("Opção inválida! Por favor, escolha uma opção válida.")
